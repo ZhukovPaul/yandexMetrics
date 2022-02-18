@@ -9,7 +9,6 @@ class usersGeography  extends \controller\ReportStategy
 
     public function getReport()
     {
-
         $paramsObj = new \Yandex\Metrica\Analytics\Models\Params();
         $paramsObj
             ->setMetrics(\Yandex\Metrica\Analytics\MetricConst::GA_USERS)

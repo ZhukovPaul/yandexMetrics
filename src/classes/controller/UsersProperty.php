@@ -29,12 +29,11 @@ class UsersProperty
 
         $cntObjArray = $objectCounters->getAll();
         $result = Array();
-        foreach($cntObjArray as $k=>$counterElement)
-        {
+
+        foreach($cntObjArray as $k=>$counterElement){
             $result[$k]["ID"] = $counterElement->getId();
             $result[$k]["NAME"] = $counterElement->getName();
             $result[$k]["SITE"] = $counterElement->getSite();
-
         }
         return $result;
     }

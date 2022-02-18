@@ -26,12 +26,18 @@ class TotalAttendanceBehavioral extends \controller\ReportStategy
     public function getReport()
     {
         $result = [];
-        $result["GA_PAGE_VIEWS"] = round(self::getQueryByConst(self::$counterId, \Yandex\Metrica\Analytics\MetricConst::GA_PAGE_VIEWS ), 2);                          //  Количество просмотров
-        $result["GA_USERS"] = round(self::getQueryByConst(self::$counterId, \Yandex\Metrica\Analytics\MetricConst::GA_USERS ), 2);                                    //  Количество посетителей
-        $result["GA_BOUNCE_RATE"] = round(self::getQueryByConst(self::$counterId, \Yandex\Metrica\Analytics\MetricConst::GA_BOUNCE_RATE ), 2);                        //  Показатель отказов
-        $result["GA_PAGE_VIEWS_PER_SESSION"] = round(self::getQueryByConst(self::$counterId, \Yandex\Metrica\Analytics\MetricConst::GA_PAGE_VIEWS_PER_SESSION ), 2);  //  Глубина просмотра
-        $result["GA_SESSIONS"] = round(self::getQueryByConst(self::$counterId, \Yandex\Metrica\Analytics\MetricConst::GA_SESSIONS ), 2);                              //  Количество визитов
-        $result["GA_AVG_SESSION_DURATION"] = round(self::getQueryByConst(self::$counterId, \Yandex\Metrica\Analytics\MetricConst::GA_AVG_SESSION_DURATION ), 2);      //  Длительность визита
+        //  Количество просмотров
+        $result["GA_PAGE_VIEWS"] = round(self::getQueryByConst(self::$counterId, \Yandex\Metrica\Analytics\MetricConst::GA_PAGE_VIEWS ), 2);                          
+        //  Количество посетителей
+        $result["GA_USERS"] = round(self::getQueryByConst(self::$counterId, \Yandex\Metrica\Analytics\MetricConst::GA_USERS ), 2);                                    
+        //  Показатель отказов
+        $result["GA_BOUNCE_RATE"] = round(self::getQueryByConst(self::$counterId, \Yandex\Metrica\Analytics\MetricConst::GA_BOUNCE_RATE ), 2);                        
+        //  Глубина просмотра
+        $result["GA_PAGE_VIEWS_PER_SESSION"] = round(self::getQueryByConst(self::$counterId, \Yandex\Metrica\Analytics\MetricConst::GA_PAGE_VIEWS_PER_SESSION ), 2);  
+        //  Количество визитов
+        $result["GA_SESSIONS"] = round(self::getQueryByConst(self::$counterId, \Yandex\Metrica\Analytics\MetricConst::GA_SESSIONS ), 2);                              
+        //  Длительность визита
+        $result["GA_AVG_SESSION_DURATION"] = round(self::getQueryByConst(self::$counterId, \Yandex\Metrica\Analytics\MetricConst::GA_AVG_SESSION_DURATION ), 2);      
         return  $result;
     }
     
