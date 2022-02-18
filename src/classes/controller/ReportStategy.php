@@ -10,9 +10,12 @@ abstract class ReportStategy
     static private $token = null;
     static private $counterId = null; 
 
+    /**
+     * Save token to using
+     */
+    
     function __construct($token, $counterId )
     {
-        //  сохраняем токен для дальнейшего использования
         if( is_null(self::$token)){
             self::$token =$token;
         }
@@ -31,6 +34,5 @@ abstract class ReportStategy
 
     abstract public function getReport();
 
-    //abstract public function getReportAllVisit( $counterId );
-    //abstract public function totalAttendanceBehavioral($counterId);
+   
 }

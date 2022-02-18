@@ -7,23 +7,20 @@ abstract class ReporterViewer
     static private $pathTemp = "/temp/"; 
     static private $pathJS = "/js/"; 
     
-     /** Подключение шаблона граффика  
-     * 
-     * @param string $tempName 
-     * @param string[] $date
-     * @return string[]
-     * 
+     /** 
+      * Connection a graphic's template 
      */
-    static function showViews($tempName, $arResult)
+    static function showViews(string $tempName,Array $result)
     {
         $tempFile = $_SERVER["DOCUMENT_ROOT"].self::$pathTemp.$tempName.".php";
          
-        if(file_exists($tempFile))
+        if(file_exists($tempFile)){
             include $tempFile ;
-        else
+        }else{
             print "Template from {$tempName} not exists on server. Please create him"; 
 
-        // $JsFile = $_SERVER["DOCUMENT_ROOT"].self::$pathJS."functions.js";
-        //if(file_exists($JsFile)) include_once $JsFile ; 
+        }
+
+    
     }
 }
