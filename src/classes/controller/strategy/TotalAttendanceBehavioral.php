@@ -19,6 +19,7 @@ class TotalAttendanceBehavioral extends \controller\ReportStategy
         $data = $analyticsClient->ga()->getGaData($paramsObj);
         $result = $data->getTotalsForAllResults()[$const] ;
         return $result ;
+        
     }
     
 
